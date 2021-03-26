@@ -1,8 +1,8 @@
 $(function(){
-    var win_w = $(window).width();
-    var last = 0;
-    var sec_pos = [];
-    var base_line = -650;
+    const win_w = $(window).width();
+    const base_line = -650;
+    let last = 0;
+    let sec_pos = [];
     
     
     
@@ -23,7 +23,7 @@ $(function(){
     
     //------------ scroll 이벤트
     $(window).on('scroll', function(){    
-        var scroll = $(this).scrollTop();
+        const scroll = $(this).scrollTop();
         
         $('section').each(function(index){
             if(scroll >=sec_pos[index] + base_line && scroll<sec_pos[index+1]){
@@ -54,7 +54,7 @@ $(function(){
     
     
     $("#visual .slide").eq(0).removeClass('active').addClass('active').siblings().hide();
-    var slideI = 0;
+    let slideI = 0;
     setInterval(function(){
         if(slideI<3){
             slideI++;
