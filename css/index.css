@@ -192,6 +192,7 @@ ul,ol,li{list-style: none;}
 }
 
 @media screen and (max-width: 1200px){
+    
     #header .gnb_wrap{
         width:100%;
         padding: 0 1rem;
@@ -245,8 +246,13 @@ ul,ol,li{list-style: none;}
 
 }
 @media screen and (max-width: 640px){
-    
+    #header.active .logo{
+        display: none;
+    }
     #header .gnb_wrap{
+        padding: 0;
+    }
+    #header.active .gnb{
         padding: 0;
     }
     #header .gnb>li:nth-of-type(3){
@@ -263,7 +269,7 @@ ul,ol,li{list-style: none;}
     #header .about_gnb .inner{
         width: 100%;
         flex-direction: column;
-       
+        
     }
     #header .shop_gnb .inner>li,
     #header .about_gnb .inner>li{
